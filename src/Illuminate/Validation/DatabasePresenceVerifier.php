@@ -51,7 +51,7 @@ class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
             $query->where($idColumn ?: 'id', '<>', $excludeId);
         }
 
-        return $this->addConditions($query, $extra)->count();
+        return $this->addConditions($query, $extra)->count($column);
     }
 
     /**
